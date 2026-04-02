@@ -1,13 +1,13 @@
-import type { ReactElement } from "react";
 import "./button.css";
 
-const BtnComp = ({ children }: { children: ReactElement }) => {
+const BtnComp = ({ children, clickEvent }: any) => {
   const btnText = "Click Me!";
   const formatText = (text: string) => {
     return text.toUpperCase();
   };
   const onBtnClick = () => {
     alert("Button Clicked!");
+    clickEvent("Child Button Clicked!");
   };
   const types = ["Primary", "Secondary", "Success", "Danger"];
   return (

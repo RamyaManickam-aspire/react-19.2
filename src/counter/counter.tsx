@@ -1,9 +1,10 @@
 import { useState } from "react";
 interface CounterText {
   counterText: string;
+  btnMessage: string;
 }
 
-const CounterComp = ({ counterText }: CounterText) => {
+const CounterComp = ({ counterText, btnMessage }: CounterText) => {
   const [count, setCount] = useState(0);
 
   return (
@@ -13,6 +14,7 @@ const CounterComp = ({ counterText }: CounterText) => {
       <p>
         {counterText} {count}
       </p>
+      <p>{btnMessage}</p>
     </>
   );
 };
