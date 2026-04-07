@@ -5,6 +5,7 @@ import LoginComp from "./login/login";
 import UserDetail from "./routes/userDetail";
 import Users from "./routes/users";
 import UserPosts from "./routes/UserPosts";
+import UserForm from "./forms/forms";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 function App() {
   const props = { counterText: "Counter is from props" };
@@ -36,6 +37,7 @@ function App() {
           <Link to="/users">Users</Link>
         </nav>
       </BrowserRouter>
+      <UserForm />
     </>
   );
 }
