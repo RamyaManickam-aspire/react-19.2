@@ -7,6 +7,8 @@ import Users from "./routes/users";
 import UserPosts from "./routes/UserPosts";
 import UserForm from "./forms/forms";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { UserProvider } from "./user/userContect";
+import Home from "./home";
 function App() {
   const props = { counterText: "Counter is from props" };
   const [btnMessage, setMessage] = useState("");
@@ -38,6 +40,9 @@ function App() {
         </nav>
       </BrowserRouter>
       <UserForm />
+      <UserProvider>
+        <Home></Home>
+      </UserProvider>
     </>
   );
 }
