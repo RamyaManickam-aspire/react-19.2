@@ -9,6 +9,7 @@ import UserForm from "./forms/forms";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { UserProvider } from "./user/userContect";
 import Home from "./home";
+import Counter from "./counter";
 function App() {
   const props = { counterText: "Counter is from props" };
   const [btnMessage, setMessage] = useState("");
@@ -27,7 +28,7 @@ function App() {
         btnMessage={btnMessage}
       ></CounterComp>
       <CounterComp {...props} btnMessage={btnMessage}></CounterComp> */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route path="users" element={<Users />}>
             <Route path=":id" element={<UserDetail />}>
@@ -38,11 +39,12 @@ function App() {
         <nav>
           <Link to="/users">Users</Link>
         </nav>
-      </BrowserRouter>
-      <UserForm />
-      <UserProvider>
+      </BrowserRouter> */}
+      {/* <UserForm /> */}
+      {/* <UserProvider>
         <Home></Home>
-      </UserProvider>
+      </UserProvider> */}
+      <Counter></Counter>
     </>
   );
 }
