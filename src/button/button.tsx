@@ -1,6 +1,9 @@
 import "./button.css";
-
-const BtnComp = ({ children, clickEvent }: any) => {
+type BtnCompProps = {
+  children?: React.ReactNode;
+  clickEvent: (message: string) => void;
+};
+const BtnComp = ({ children, clickEvent }: BtnCompProps) => {
   const btnText = "Click Me!";
   const formatText = (text: string) => {
     return text.toUpperCase();

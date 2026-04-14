@@ -4,12 +4,13 @@ import CounterComp from "./counter/counter";
 import LoginComp from "./login/login";
 import UserDetail from "./routes/userDetail";
 import Users from "./routes/users";
-import UserPosts from "./routes/UserPosts";
+import UserPosts from "./routes/userPosts";
 import UserForm from "./forms/forms";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { UserProvider } from "./user/userContect";
+import { UserProvider } from "./user/userProvider";
 import Home from "./home";
 import Counter from "./counter";
+import UserList from "./UserList";
 function App() {
   const props = { counterText: "Counter is from props" };
   const [btnMessage, setMessage] = useState("");
@@ -27,8 +28,8 @@ function App() {
         counterText={"Counter is"}
         btnMessage={btnMessage}
       ></CounterComp>
-      <CounterComp {...props} btnMessage={btnMessage}></CounterComp> */}
-      {/* <BrowserRouter>
+      <CounterComp {...props} btnMessage={btnMessage}></CounterComp>
+      <BrowserRouter>
         <Routes>
           <Route path="users" element={<Users />}>
             <Route path=":id" element={<UserDetail />}>
@@ -39,12 +40,13 @@ function App() {
         <nav>
           <Link to="/users">Users</Link>
         </nav>
-      </BrowserRouter> */}
-      {/* <UserForm /> */}
-      {/* <UserProvider>
+      </BrowserRouter>
+      <UserForm />
+      <UserProvider>
         <Home></Home>
-      </UserProvider> */}
-      <Counter></Counter>
+      </UserProvider>
+      <Counter></Counter> */}
+      <UserList></UserList>
     </>
   );
 }
